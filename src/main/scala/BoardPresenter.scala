@@ -32,7 +32,7 @@ object BoardPresenter {
       "3 " + mkString(board._3_row) + "\n" +
       "2 " + mkString(board._2_row) + "\n" +
       "1 " + mkString(board._1_row) + "\n" +
-      "  " + List("A","B","C","D","E","F","G","H").map(l => s" $l").mkString("| ", " | ", " |")
+      "  " + List(" A"," B"," C"," D"," E"," F"," G"," H").mkString("| ", " | ", " |")
     }
   }
 }
