@@ -80,4 +80,11 @@ class BoardTest extends FlatSpec with Matchers {
     board.fields.toList should be(expectedBoard.fields.toList)
   }
 
+  it should "get field by position" in {
+    val board = Board()
+    board.getByFieldPosition(FieldPosition.A1) should be(Some(Field(A1, Some(ColoredFigure(White, Rook)))))
+    board.getByFieldPosition(FieldPosition.G5) should be(Some(Field(G5, None)))
+    board.getByFieldPosition(FieldPosition.H8) should be(Some(Field(H8, Some(ColoredFigure(Black, Rook)))))
+  }
+
 }
