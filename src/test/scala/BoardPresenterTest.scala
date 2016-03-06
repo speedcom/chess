@@ -3,7 +3,7 @@ import org.scalatest.{FlatSpec, Matchers}
 class BoardPresenterTest extends FlatSpec with Matchers {
 
   "ConsolePresenter" should "be able to create plain text version of board" in {
-      val board = Board()
+    val board = Board()
 
     val presentation = BoardPresenter.ConsolePresenter(board)
 
