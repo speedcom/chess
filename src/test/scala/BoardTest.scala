@@ -87,4 +87,18 @@ class BoardTest extends FlatSpec with Matchers {
     board.getByFieldPosition(FieldPosition.H8) should be(Some(Field(H8, Some(ColoredFigure(Black, Rook)))))
   }
 
+  it should "get exemplary row of fields" in {
+    val board = Board()
+
+    board._1_row.toList should be(List(Field(A1,Some(ColoredFigure(White,Rook))), Field(B1,Some(ColoredFigure(White,Knight))), Field(C1,Some(ColoredFigure(White,Bishop))), Field(D1,Some(ColoredFigure(White,Queen))), Field(E1,Some(ColoredFigure(White,King))), Field(F1,Some(ColoredFigure(White,Bishop))), Field(G1,Some(ColoredFigure(White,Knight))), Field(H1,Some(ColoredFigure(White,Rook)))))
+  }
+
+  it should "check that every row has size of 8" in {
+    val board = Board()
+
+    List(
+      board._1_row, board._2_row, board._3_row, board._4_row,
+      board._5_row, board._6_row, board._7_row, board._8_row
+    ) forall(_.size == 8)
+  }
 }
