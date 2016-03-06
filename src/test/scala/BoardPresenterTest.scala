@@ -31,4 +31,9 @@ class BoardPresenterTest extends FlatSpec with Matchers {
     ConsolePresenter.figureNameSymbol(Figure.King)   should be("K")
   }
 
+  it should "create representation for every color" in {
+    ConsolePresenter.colorNameSymbol(Color.White) should be("w")
+    ConsolePresenter.colorNameSymbol(Color.Black) should be("b")
+  }
+
 }
